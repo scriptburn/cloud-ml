@@ -1,0 +1,10 @@
+FROM php:7.2-apache
+
+
+RUN mkdir /setup
+COPY setup /setup
+ 
+
+RUN  chmod +x /setup/docker-setup.sh && /setup/docker-setup.sh
+
+EXPOSE 80 443
